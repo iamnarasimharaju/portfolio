@@ -8,7 +8,7 @@ export const portfolioData = {
       "Entry-level Cybersecurity Analyst with hands-on experience in Security Operations (SOC), threat detection, vulnerability assessment, and web application security. Skilled in analyzing network traffic, identifying malicious activity, and investigating security events using tools such as Wireshark, Nmap, Splunk, Burp Suite, and ELK Stack. Experienced in penetration testing, identifying vulnerabilities like SQL Injection and XSS, and documenting remediation strategies. Strong foundation in network security, incident response concepts, and secure system monitoring with a focus on protecting systems and identifying cyber threats.",
 
     links: {
-      github: "https://github.com/Raju84311",
+      github: "https://github.com/iamnarasimharaju",
       linkedin: "https://linkedin.com/in/narasimharaju1",
       cyberResume: "Resume.pdf"
     }
