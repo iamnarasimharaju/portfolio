@@ -80,12 +80,13 @@ export default function Hero() {
         </a>
 
         <a
-          href={hero.links.Resume}
-          download
+          href={hero.links.cyberResume}
+          target="_blank"
+          rel="noopener noreferrer"
           className="btn btn-outline"
         >
           Resume
-        </a>
+</a>
       </div>
     </motion.section>
   );

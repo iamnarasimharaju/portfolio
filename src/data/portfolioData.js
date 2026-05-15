@@ -10,7 +10,7 @@ export const portfolioData = {
     links: {
       github: "https://github.com/iamnarasimharaju",
       linkedin: "https://linkedin.com/in/narasimharaju1",
-      cyberResume: "Resume.pdf"
+      cyberResume: "RESUME.pdf"
     }
   },
 
