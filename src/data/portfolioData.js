@@ -100,6 +100,53 @@ export const portfolioData = {
   ],
 
   cyberProjects: [
+
+    {
+  title: "PasswordGuard Pro",
+
+  subtitle: "Enterprise Password Security Suite",
+
+  tools: [
+  "React",
+  "Vite",
+  "JavaScript",
+  "React Router",
+  "zxcvbn",
+  "jsPDF",
+  "html2canvas",
+  "Vercel"
+],
+
+  image: "passwordguard-pro.png",
+
+  description:
+    "Developed a modern web-based password security platform that helps users create, analyze, and manage secure passwords using industry best practices. The application provides password strength analysis, entropy calculation, crack time estimation, password auditing, breach checking, and downloadable security reports through an interactive dashboard.",
+
+  features: [
+    "Password Strength Analyzer",
+    "Secure Password Generator",
+    "Password Audit Dashboard",
+    "Password Breach Checker",
+    "Entropy Calculation",
+    "Crack Time Estimation",
+    "PDF Security Report Generation",
+    "Interactive Security Dashboard",
+    "User Authentication",
+    "Dark & Light Theme",
+    "Responsive UI"
+  ],
+
+  github:
+    "https://github.com/iamnarasimharaju/PasswordGuard-Pro",
+
+  demo:
+    "https://password-guard-pro.vercel.app",
+
+  status: "Completed",
+
+  level: "Advanced"
+},
+
     {
       title: "SOC Log Monitoring & Threat Detection System",
       tools: "Wireshark, Splunk, ELK Stack, Nmap",
