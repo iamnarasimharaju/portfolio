@@ -42,7 +42,12 @@ export const portfolioData = {
       "Alert Severity Classification"
     ],
 
-    programming: ["Python", "Java", "C", "SQL"],
+    programming: [
+      "Python",
+      "Java",
+      "C",
+      "SQL"
+    ],
 
     webTechnologies: [
       "HTML",
@@ -69,6 +74,7 @@ export const portfolioData = {
         "Booking conflict prevention"
       ]
     },
+
     {
       title: "LiDAR-Based Object Detection",
       tech: "Python, Deep Learning, Open3D",
@@ -83,6 +89,7 @@ export const portfolioData = {
         "Performance benchmarking"
       ]
     },
+
     {
       title: "IoT-Based Anti-Poaching Alarm System",
       tech: "Arduino, Sensors, IoT",
@@ -102,50 +109,108 @@ export const portfolioData = {
   cyberProjects: [
 
     {
-  title: "PasswordGuard Pro",
+      title: "ThreatLens",
 
-  subtitle: "Enterprise Password Security Suite",
+      subtitle:
+        "Web Security Scanning & Security Operations Platform",
 
-  tools: [
-  "React",
-  "Vite",
-  "JavaScript",
-  "React Router",
-  "zxcvbn",
-  "jsPDF",
-  "html2canvas",
-  "Vercel"
-],
+      tools: [
+        "React",
+        "Vite",
+        "JavaScript",
+        "React Router",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Mongoose",
+        "JWT",
+        "bcrypt",
+        "Axios",
+        "Tailwind CSS",
+        "Vercel"
+      ],
 
-  image: "passwordguard-pro.png",
+      image: "threatlens.png",
 
-  description:
-    "Developed a modern web-based password security platform that helps users create, analyze, and manage secure passwords using industry best practices. The application provides password strength analysis, entropy calculation, crack time estimation, password auditing, breach checking, and downloadable security reports through an interactive dashboard.",
+      description:
+        "Developed and deployed a full-stack web security platform that enables users to scan websites for potential security risks through a centralized security operations dashboard. The platform provides security scan results, analytics, scan history, report generation, PDF security reports, and secure user authentication with a responsive desktop and mobile interface.",
 
-  features: [
-    "Password Strength Analyzer",
-    "Secure Password Generator",
-    "Password Audit Dashboard",
-    "Password Breach Checker",
-    "Entropy Calculation",
-    "Crack Time Estimation",
-    "PDF Security Report Generation",
-    "Interactive Security Dashboard",
-    "User Authentication",
-    "Dark & Light Theme",
-    "Responsive UI"
-  ],
+      features: [
+        "Website Security Scanner",
+        "Security Risk Analysis",
+        "Security Operations Dashboard",
+        "Scan History & Tracking",
+        "Security Analytics",
+        "Detailed Security Reports",
+        "PDF Security Report Generation",
+        "User Registration & Authentication",
+        "JWT-Based Session Authentication",
+        "bcrypt Password Hashing",
+        "HTTP-Only Authentication Cookies",
+        "Protected Routes & User Sessions",
+        "RESTful Backend API",
+        "MongoDB Database Integration",
+        "Responsive Mobile & Desktop UI",
+        "CORS & Helmet Security Configuration",
+        "Production Deployment with Vercel"
+      ],
 
-  github:
-    "https://github.com/iamnarasimharaju/PasswordGuard-Pro",
+      github:
+        "https://github.com/iamnarasimharaju/ThreatLens",
 
-  demo:
-    "https://password-guard-pro.vercel.app",
+      demo:
+        "https://threat-lens-black.vercel.app",
 
-  status: "Completed",
+      status: "Completed",
 
-  level: "Advanced"
-},
+      level: "Advanced"
+    },
+
+    {
+      title: "PasswordGuard Pro",
+
+      subtitle: "Enterprise Password Security Suite",
+
+      tools: [
+        "React",
+        "Vite",
+        "JavaScript",
+        "React Router",
+        "zxcvbn",
+        "jsPDF",
+        "html2canvas",
+        "Vercel"
+      ],
+
+      image: "passwordguard-pro.png",
+
+      description:
+        "Developed a modern web-based password security platform that helps users create, analyze, and manage secure passwords using industry best practices. The application provides password strength analysis, entropy calculation, crack time estimation, password auditing, breach checking, and downloadable security reports through an interactive dashboard.",
+
+      features: [
+        "Password Strength Analyzer",
+        "Secure Password Generator",
+        "Password Audit Dashboard",
+        "Password Breach Checker",
+        "Entropy Calculation",
+        "Crack Time Estimation",
+        "PDF Security Report Generation",
+        "Interactive Security Dashboard",
+        "User Authentication",
+        "Dark & Light Theme",
+        "Responsive UI"
+      ],
+
+      github:
+        "https://github.com/iamnarasimharaju/PasswordGuard-Pro",
+
+      demo:
+        "https://password-guard-pro.vercel.app",
+
+      status: "Completed",
+
+      level: "Advanced"
+    },
 
     {
       title: "SOC Log Monitoring & Threat Detection System",
@@ -258,6 +323,7 @@ export const portfolioData = {
       year: "2023 – 2025",
       cgpa: "7.41"
     },
+
     {
       degree: "B.Sc Computer Science",
       institution: "NIE First Grade College",
@@ -275,6 +341,7 @@ export const portfolioData = {
       description:
         "Completed cybersecurity analyst simulation focusing on IAM, risk analysis, and SOC workflows."
     },
+
     {
       title: "JPMorgan Chase Software Engineering Simulation",
       issuer: "Forage",
@@ -283,6 +350,7 @@ export const portfolioData = {
       description:
         "Worked on real-world cybersecurity tasks including log analysis and threat detection."
     },
+
     {
       title: "Cyber Security Workshop Participation",
       issuer: "Amrita Vishwa Vidyapeetham, Mysuru Campus",
@@ -291,6 +359,7 @@ export const portfolioData = {
       description:
         "Participated in a one-day hands-on workshop on Cyber Security covering practical concepts and security fundamentals."
     },
+
     {
       title: "Certified Blockchain Security Examiner",
       issuer: "Blockchain Council",
