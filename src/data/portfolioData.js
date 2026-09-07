@@ -334,6 +334,15 @@ export const portfolioData = {
 
   certifications: [
     {
+      title: "Introduction to Cybersecurity",
+      issuer: "Cisco Networking Academy",
+      image: "introduction-to-cybersecurity.png",
+      file: "cisco-introduction-to-cybersecurity.pdf",
+      description:
+      "Successfully completed the Introduction to Cybersecurity course through the Cisco Networking Academy program."
+    },
+    
+    {
       title: "Tata Cybersecurity Analyst Simulation",
       issuer: "Forage",
       image: "tata-cybersecurity.png",
