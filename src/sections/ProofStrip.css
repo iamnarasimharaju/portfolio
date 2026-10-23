@@ -1,0 +1,115 @@
+/* =========================================
+   PROFESSIONAL PROOF STRIP
+========================================= */
+
+.proof-strip {
+  position: relative;
+  width: 100%;
+
+  padding: 30px 7%;
+
+  background: #0c1016;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.proof-strip-container {
+  width: min(1240px, 100%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.proof-item {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 8px 15px;
+
+  text-align: center;
+}
+
+.proof-item + .proof-item {
+  border-left: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.proof-value {
+  color: #75f0b5;
+
+  font-size: clamp(24px, 2.5vw, 34px);
+  font-weight: 800;
+
+  line-height: 1.1;
+  letter-spacing: -0.8px;
+}
+
+.proof-label {
+  color: #929bad;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 760px) {
+  .proof-strip {
+    padding: 25px 5%;
+  }
+
+  .proof-strip-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 24px;
+  }
+
+  .proof-item {
+    padding: 10px;
+  }
+
+  .proof-item + .proof-item {
+    border-left: none;
+  }
+
+  .proof-item:nth-child(even) {
+    border-left: 1px solid rgba(255, 255, 255, 0.09);
+  }
+
+  .proof-value {
+    font-size: 27px;
+  }
+
+  .proof-label {
+    font-size: 10px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+  .proof-strip {
+    padding: 22px 4%;
+  }
+
+  .proof-value {
+    font-size: 24px;
+  }
+
+  .proof-label {
+    font-size: 9px;
+  }
+}

@@ -1,127 +1,113 @@
 import { portfolioData } from "../data/portfolioData";
 
 export default function Certifications() {
+  const certifications = portfolioData.certifications || [];
+
   return (
-    <section
-      style={{
-        minHeight: "100vh",
-        padding: "8rem 2rem 4rem"
-      }}
-    >
-      <h2
-        style={{
-          fontSize: "2.3rem",
-          marginBottom: "2rem"
-        }}
-      >
-        Certifications
-      </h2>
+    <section className="section certifications-section">
+      <div className="section-container">
+        <span className="section-eyebrow">PROFESSIONAL DEVELOPMENT</span>
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-          gap: "2rem"
-        }}
-      >
-        {portfolioData.certifications.map((cert, index) => (
-          <div
-            key={index}
-            className="card"
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              transition: "transform 0.3s ease",
-              cursor: "default"
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "translateY(-6px)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "translateY(0)";
-            }}
-          >
-            {/* Certificate Image */}
-            {cert.image && (
-              <a
-                href={`/portfolio/${cert.file}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: "block"
-                }}
-              >
-                <img
-                  src={`/portfolio/${cert.image}`}
-                  alt={cert.title}
-                  style={{
-                    width: "100%",
-                    height: "270px",
-                    objectFit: "contain",
-                    borderRadius: "10px",
-                    marginBottom: "1rem",
-                    display: "block"
+        <h1 className="section-title">Certifications</h1>
+
+        <p className="section-description">
+          Certifications, training, and learning experiences that support my
+          journey in cybersecurity and software engineering.
+        </p>
+
+        <div className="certifications-grid">
+          {certifications.map((cert, index) => (
+            <article className="certification-card" key={cert.title || index}>
+              <div className="certification-card-header">
+                <span className="certification-number">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+
+                <span className="certification-label">
+                  CERTIFICATION
+                </span>
+              </div>
+
+              {cert.image && (
+                <a
+                  href={cert.file ? `/portfolio/${cert.file}` : undefined}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="certification-image-link"
+                  aria-label={`View certificate for ${cert.title}`}
+                  onClick={(event) => {
+                    if (!cert.file) event.preventDefault();
                   }}
-                  onError={(e) => {
-                    console.error(
-                      `Certificate image failed to load: /portfolio/${cert.image}`
-                    );
-                    e.currentTarget.style.display = "none";
-                  }}
-                />
-              </a>
-            )}
+                >
+                  <div className="certification-image-container">
+                    <img
+                      src={`/portfolio/${cert.image}`}
+                      alt={`${cert.title} certificate`}
+                      className="certification-image"
+                      loading="lazy"
+                      onError={(event) => {
+                        event.currentTarget.style.display = "none";
+                      }}
+                    />
 
-            {/* Title */}
-            <h3
-              style={{
-                fontSize: "1.2rem",
-                lineHeight: "1.4",
-                marginBottom: "0.4rem"
-              }}
-            >
-              {cert.title}
-            </h3>
+                    <span className="certification-image-overlay">
+                      View Preview ↗
+                    </span>
+                  </div>
+                </a>
+              )}
 
-            {/* Issuer */}
-            <p
-              style={{
-                opacity: 0.8,
-                marginBottom: "0.8rem"
-              }}
-            >
-              <strong>Issuer:</strong> {cert.issuer}
-            </p>
+              <div className="certification-content">
+                <h2 className="certification-title">{cert.title}</h2>
 
-            {/* Description */}
-            <p
-              style={{
-                lineHeight: "1.6",
-                opacity: 0.9,
-                flexGrow: 1
-              }}
-            >
-              {cert.description}
-            </p>
+                <p className="certification-issuer">
+                  <span className="certification-issuer-label">
+                    ISSUED BY
+                  </span>
+                  <span>{cert.issuer}</span>
+                </p>
 
-            {/* View Certificate */}
-            <a
-              href={`/portfolio/${cert.file}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-primary"
-              style={{
-                marginTop: "1rem",
-                display: "inline-block",
-                textAlign: "center",
-                textDecoration: "none",
-                width: "fit-content"
-              }}
-            >
-              View Certificate
-            </a>
-          </div>
-        ))}
+                {cert.description && (
+                  <p className="certification-description">
+                    {cert.description}
+                  </p>
+                )}
+
+                <div className="certification-actions">
+                  {cert.file ? (
+                    <a
+                      href={`/portfolio/${cert.file}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="certification-button"
+                    >
+                      View Certificate
+                      <span aria-hidden="true">↗</span>
+                    </a>
+                  ) : (
+                    <span className="certification-unavailable">
+                      Certificate file unavailable
+                    </span>
+                  )}
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        {certifications.length === 0 && (
+          <p className="certifications-empty">
+            Certifications will appear here once they are available.
+          </p>
+        )}
+
+        <div className="certifications-footer">
+          <span className="certifications-footer-dot" />
+          <p>
+            Continuously learning and developing practical skills in
+            cybersecurity and application security.
+          </p>
+        </div>
       </div>
     </section>
   );
